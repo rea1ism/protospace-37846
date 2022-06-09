@@ -42,8 +42,8 @@ class PrototypesController < ApplicationController
     if @prototype.save
       redirect_to prototype_path(@prototype.id)
     else
-      @prototype = Prototype.find(prototype_params)
-      render :show
+      @prototype = Prototype.find(params[:id])
+      render :edit
     end
   end
 
